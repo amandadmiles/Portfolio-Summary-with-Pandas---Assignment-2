@@ -2,7 +2,7 @@
 Program: portfolio_summary.py
 Author: Amanda Miles
  
-Purpose: This program demonstrates basic pandas library functions by reading
+Purpose: This program demonstrates pandas library functions by reading
 a sample investment portfolio from a CSV file, cleaning the data, calculating
 cost, value, gain or loss, and summarizing the portfolio by sector.
  
