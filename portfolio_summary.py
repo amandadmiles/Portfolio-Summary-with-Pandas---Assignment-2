@@ -7,71 +7,65 @@ a sample investment portfolio from a CSV file, cleaning the data, calculating
 cost, value, gain or loss, and summarizing the portfolio by sector.
  
 Built-in Python functions and concepts used:
-1. input() - Used to ask the user for the CSV file name. This function is used
-for terminal input and is discussed in Section 1.4, composing and running a
-simple Python program.
+1. input() - Asks the user to type the CSV file name so the program knows
+which file to open. (Section 1.4 Compose and run a simple Python program)
  
-2. print() - Used to display the portfolio report in the terminal. This function
-is used for terminal output and is discussed in Section 1.4, composing and
-running a simple Python program.
+2. print() - Displays text and results in the terminal for the user to read.
+(Section 1.4 Compose and run a simple Python program)
  
-3. round() - Used to round money totals to two decimal places. This function
-relates to arithmetic expressions and numeric output discussed in Section 2.4,
-Expressions.
+3. round() - Rounds dollar totals to two decimal places for clean output.
+(Section 2.4 Expressions)
  
 4. Arithmetic operators (* - / +) - Used to calculate cost, current value,
-gain or loss, and return percentage for each holding. Arithmetic operators
-are discussed in Section 2.4, Expressions.
+gain or loss, and return percentage for each holding.
+(Section 2.4 Expressions)
  
-5. import statement - Used to import the pandas library as pd so its functions
-can be called throughout the program. The import statement is discussed in
-Section 2.5, Using Functions and Modules.
+5. import statement - Brings the pandas library into the program so its
+tools are ready to use. The shortcut pd is assigned as a nickname so that
+pd can be written instead of pandas throughout the code.
+(Section 2.5 Using Functions and Modules)
  
-6. String literals - Used in print statements to display labeled output such as
-"Original Portfolio Data" and "Portfolio Totals". String literals are discussed
-in Section 2.2, Strings, Assignment, and Comments.
+6. String literals - Text in quotes used to label each section of output,
+such as "Original Portfolio Data" and "Portfolio Totals".
+(Section 2.2 Strings, Assignment, and Comments)
  
-7. sep="" - Used as a parameter inside print() to prevent a space from being
-inserted between the dollar sign and the numeric value. The sep parameter
-relies on string behavior discussed in Section 2.2, Strings, Assignment,
-and Comments.
+7. sep="" - Removes the automatic space that print() adds between items,
+keeping the dollar sign and number together with no gap.
+(Section 2.2 Strings, Assignment, and Comments)
  
-8. True and False (Boolean values) - Used in the sort_values() call with
-ascending=False to sort the sector summary from highest to lowest value.
-Boolean values are discussed in Section 3.3, Selection: if and if-else
-Statements.
+8. True and False (Boolean values) - Used to control the sort direction,
+where ascending=False tells the program to sort from highest to lowest.
+(Section 3.3 Selection: if and if-else Statements)
  
-9. String comparison using == - Used in the if __name__ == "__main__" check
-to determine whether the file is being run directly. String comparison is
-discussed in Section 3.3, Selection: if and if-else Statements.
+9. String comparison using == - Checks whether the program is being run
+directly, which determines whether the main function should be called.
+(Section 3.3 Selection: if and if-else Statements)
  
-10. Comparison operator >= - Used in the if-else statement to evaluate whether
-the total gain or loss is zero or positive. Comparison operators are discussed
-in Section 3.3, Selection: if and if-else Statements.
+10. Comparison operator >= - Checks whether the total gain or loss is zero
+or greater to decide which status message to print.
+(Section 3.3 Selection: if and if-else Statements)
  
 Pandas library functions and methods used:
-1. pd.read_csv() - Used to read portfolio data from a CSV file into a DataFrame.
-Reading data from a file connects to the concept of reading from text files
-discussed in Section 4.5, Text Files.
+1. pd.read_csv() - Reads the CSV file and loads all the data into a table
+the program can work with. (Section 4.5 Text Files)
  
-2. drop_duplicates() - Used to remove repeated rows from the portfolio data so
-that the same holding is not counted more than once in the calculations.
+2. drop_duplicates() - Scans the data and removes any rows that appear more
+than once so no holding is counted twice.
  
-3. fillna() - Used to replace any missing values in the data with zero so that
-calculations are not affected by empty cells.
+3. fillna() - Finds any empty cells in the data and fills them with zero
+so calculations are not affected.
  
-4. groupby() - Used to group all holdings by their sector so that totals can
-be calculated for each industry category.
+4. groupby() - Groups all holdings together by sector so totals can be
+calculated for each industry category.
  
-5. sum() - Used to calculate the total cost, total value, and total gain or
-loss across all holdings and within each sector group.
+5. sum() - Adds up the numbers in a column to produce a total, used for
+cost, value, and gain or loss across the whole portfolio.
  
-6. sort_values() - Used to sort the sector summary table from highest to lowest
-current value. This is conceptually similar to sorting a list, which is
-discussed in Section 5.1, Lists.
+6. sort_values() - Sorts the sector summary from highest to lowest value,
+similar to sorting a list. (Section 5.1 Lists)
  
-7. to_string() - Used to display the full DataFrame output in the terminal
-without truncating any rows or columns.
+7. to_string() - Displays the full table in the terminal without cutting
+off any rows or columns.
 """
  
 # Imports the pandas library so its functions can be used in the program (Section 2.5 Using Functions and Modules)
