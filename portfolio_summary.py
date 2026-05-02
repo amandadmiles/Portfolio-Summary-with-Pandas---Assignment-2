@@ -140,7 +140,7 @@ def main():
     print("Sector Summary")
     print(sectorSummary.to_string())
  
-# Uses an equality check and calls the main function when this file is run directly (Sections 3.3 and 5.2)
+# Confirms the program was started by the user, then calls the main function to begin (Sections 3.3 and 5.2)
 if __name__ == "__main__":
     main()
  
